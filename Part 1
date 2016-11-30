@@ -1,0 +1,40 @@
+# This is in python 3
+# Step 1
+
+
+def display_selection():
+    print("|-------------------------------------------|")
+    print("|Please write the option that you are,      |")
+    print("|1 meaning that you are a Returning Customer|")
+    print("|2 meaning that you are a New Customer      |")
+    print("|3 meaning that you are a Guest             |")
+    print("|-------------------------------------------|")
+    user_type = input("What is your customer type? ")
+    if user_type == "1":
+        print('You have choose "Returning Customer"')
+    if user_type == "2":
+        print('You have choose "New Customer"')
+    if user_type == "3":
+        print('You have choose "Guest"')
+    return user_type
+
+
+def is_int_user_type():
+    while True:
+        try:
+            x = display_selection()
+            y = int(x)
+            return y
+        except ValueError:
+            print("Please enter a numerical value between 1 and 3, try again")
+
+
+def is_between():
+    var1 = is_int_user_type()
+    while True:
+        if var1 > 3 or var1 < 1:
+            var1 = is_int_user_type()
+        else:
+            break
+    return var1
+user = is_between()
