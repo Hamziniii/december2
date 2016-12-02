@@ -1,0 +1,6 @@
+# This is still python3
+import December2.funiture
+
+desk = December2.funiture.OfficeFurniture("Table", "Wood", "6ft", "5ft", "3ft", "32.10$")
+desk.set_height("4ft")
+print(desk.__str__())
