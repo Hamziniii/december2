@@ -1,0 +1,19 @@
+# This is still python3 and that's why my import is importing a file from a package
+# Also for some reason it is giving me an Error of
+"""
+Traceback (most recent call last):
+  File "C:/Users/Owner/PycharmProjects/PythonProject/December2ed/desk.py", line 12, in <module>
+    desk1 = December2.funiture.Desk("Desk", "Metal and Glass", "2ft", "2ft", "3ft", "456.78", "Office Room", "9")
+  File "C:\Users\Owner\PycharmProjects\PythonProject\December2\funiture.py", line 62, in __init__
+    OfficeFurniture.__init__(category, material, length, width, height, price)
+  File "C:\Users\Owner\PycharmProjects\PythonProject\December2\funiture.py", line 6, in __init__
+    self.__category = category
+AttributeError: 'str' object has no attribute '_OfficeFurniture__category'
+"""
+# I dont understand why, I nearly did the exact same in the OfficeFurniture class and it didn't give me this error
+# when implementing this class.
+import December2.funiture
+
+desk1 = December2.funiture.Desk("Desk", "Metal and Glass", "2ft", "2ft", "3ft", "456.78", "Office Room", "9")
+desk1.set_length("1ft")
+print(desk1.__str__())
